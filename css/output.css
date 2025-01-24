@@ -593,9 +593,6 @@
   .flex-col {
     flex-direction: column;
   }
-  .flex-col-reverse {
-    flex-direction: column-reverse;
-  }
   .flex-row {
     flex-direction: row;
   }
@@ -614,9 +611,6 @@
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
-  .gap-5 {
-    gap: calc(var(--spacing) * 5);
-  }
   .space-y-4 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -633,9 +627,6 @@
   }
   .rounded {
     border-radius: 0.25rem;
-  }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
@@ -654,9 +645,6 @@
   }
   .border-green-500 {
     border-color: var(--color-green-500);
-  }
-  .bg-black {
-    background-color: var(--color-black);
   }
   .bg-gray-700 {
     background-color: var(--color-gray-700);
@@ -694,9 +682,6 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .text-black {
-    color: var(--color-black);
-  }
   .text-green-500 {
     color: var(--color-green-500);
   }
@@ -721,6 +706,46 @@
       }
     }
   }
+  .max-\[5\]\:w-full {
+    @media (width < 5) {
+      width: 100%;
+    }
+  }
+  .max-\[475px\]\:w-\[200px\] {
+    @media (width < 475px) {
+      width: 200px;
+    }
+  }
+  .max-\[475px\]\:w-full {
+    @media (width < 475px) {
+      width: 100%;
+    }
+  }
+  .max-\[450px\]\:w-full {
+    @media (width < 450px) {
+      width: 100%;
+    }
+  }
+  .max-\[340px\]\:w-full {
+    @media (width < 340px) {
+      width: 100%;
+    }
+  }
+  .max-\[340px\]\:flex-col {
+    @media (width < 340px) {
+      flex-direction: column;
+    }
+  }
+  .max-\[340px\]\:gap-3 {
+    @media (width < 340px) {
+      gap: calc(var(--spacing) * 3);
+    }
+  }
+  .max-\[px\]\:w-full {
+    @media (width < px) {
+      width: 100%;
+    }
+  }
   .lg\:w-1\/2 {
     @media (width >= 64rem) {
       width: calc(1/2 * 100%);
@@ -739,11 +764,6 @@
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
-    }
-  }
-  .lg\:flex-row-reverse {
-    @media (width >= 64rem) {
-      flex-direction: row-reverse;
     }
   }
   .lg\:space-y-0 {
